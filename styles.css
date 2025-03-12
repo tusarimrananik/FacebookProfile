@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'MyBanglaFont';
-    src: url('fonts/FL\ Sadhin\ Bangladesh\ Unicode.ttf') format('truetype');
+    src: url('fonts/kalpurush.ttf') format('truetype');
     /* This covers the Bengali Unicode block: U+0980–U+09FF */
     unicode-range: U+0980-09FF;
 }
