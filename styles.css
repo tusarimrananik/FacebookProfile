@@ -1,19 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
-@font-face {
-    font-family: 'MyBanglaFont';
-    src: url('fonts/kalpurush.ttf') format('truetype');
-    /* This covers the Bengali Unicode block: U+0980–U+09FF */
-    unicode-range: U+0980-09FF;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', 'MyBanglaFont', sans-serif;
+    font-family: 'Roboto', 'Noto Sans Bengali', sans-serif;
     ;
 }
 
