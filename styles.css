@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
+@font-face {
+    font-family: 'MyBanglaFont';
+    src: url('fonts/FL\ Sadhin\ Bangladesh\ Unicode.ttf') format('truetype');
+    /* This covers the Bengali Unicode block: U+0980–U+09FF */
+    unicode-range: U+0980-09FF;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'Roboto', 'MyBanglaFont', sans-serif;
+    ;
 }
 
 body {
