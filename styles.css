@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', 'Noto Sans Bengali', sans-serif;
-    ;
+    font-family: 'Roboto';
 }
 
 body {
@@ -107,53 +105,6 @@ body {
     /* display: none; */
 }
 
-.addStory {
-    display: flex;
-    align-items: center;
-    background-color: rgba(27, 116, 228, 1.0);
-    border-radius: 6px;
-    /* Facebook's green color */
-    color: white;
-    border: none;
-    padding: 0px 30px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    justify-content: space-between;
-}
-
-.editProfile {
-    display: flex;
-    align-items: center;
-    background-color: rgba(228, 230, 235, 1.0);
-    /* Facebook's green color */
-    color: black;
-    border: none;
-    border-radius: 6px;
-    padding: 0px 30px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-
-
-.treeDot {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    background-color: rgba(228, 230, 235, 1.0);
-    /* Facebook's green color */
-    border: none;
-    border-radius: 6px;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-align: center;
-}
 
 
 
@@ -405,19 +356,11 @@ body {
     /* Creates a 4px white inner border */
 }
 
-
-
-
-
-
-
 #mainName {
     font-size: 22px;
     font-weight: 700;
     /* background-color: red; */
 }
-
-
 
 .bioSection {
     display: flex;
@@ -432,8 +375,6 @@ body {
     margin-right: 17px;
 }
 
-
-
 #friendsText {
     color: #65676B;
     font-weight: normal;
@@ -443,86 +384,207 @@ body {
     text-transform: capitalize;
 }
 
+
+
+.followerCount {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.folpic{
+    display: flex;
+    gap: 3px;
+}
+
+
+
+.folpic div {
+
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    background-color: red;
+}
+
+
+
 .bio {
     font-weight: normal;
 }
 
 
 
-.buttons {
+/* ================================== */
+.normal-profile {
     display: flex;
     flex-direction: row;
     margin: 17px;
-    /* gap: 6px; */
     justify-content: space-between;
     gap: 2px;
-    /* background-color:red ; */
 }
 
+.add-story-button {
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 30px;
+    gap: 10px;
+    background-color: #1b74e4;
+    color: white;
+}
 
-
-
-.plusSign {
-    align-self: center;
-    /* font-size: 20px; */
-    /* Size of the plus sign */
-    margin-right: 5px;
-    /* Space between plus sign and text */
+.add-story-icon {
     width: 15px;
-    /* height: 10px; */
 }
 
-.plusSign img {
-    width: 90%;
-    margin-top: 2px;
-
-}
-
-
-
-.pencilSign {
-    width: 15px;
-    align-self: center;
-}
-
-.pencilSign img {
+.add-story-icon img {
     width: 100%;
     margin-top: 2px;
 }
 
+.add-story-text {
+    align-self: center;
+}
 
-
-
-
-
-
-
-
-
-#dots {
+.edit-profile-button {
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 30px;
+    gap: 10px;
+    background-color: #e4e6eb;
     color: black;
-    margin-top: -10px;
+}
+
+.edit-profile-icon {
+    width: 15px;
+}
+
+.edit-profile-icon img {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.edit-profile-text {
+    align-self: center;
+}
+
+.more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 10px 20px;
+    background-color: #e4e6eb;
+    cursor: pointer;
+}
+
+.more-button-icon {
+    color: black;
     font-weight: 900;
     font-size: 20px;
     letter-spacing: -2px;
+    margin-top: -10px;
+}
+
+/* Professional Profile */
+.professional-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 17px;
+    gap: 10px;
+}
+
+.dashboard-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #1b74e4;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 6px 20px;
+}
+
+.dashboard-icon {
+    width: 15px;
+    filter: invert(1);
+}
+
+.dashboard-icon img {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.dashboard-text {
+    align-self: center;
+}
+
+.professional-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.professional-actions .add-story-button {
+    flex: 1;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #e4e6eb;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.professional-profile .add-story-icon {
+    width: 18px;
 
 }
 
+.edit-profile-icon img {
+    width: 100%;
+    margin-top: 2px;
+}
 
+.edit-profile-text {
+    align-self: center;
+}
 
+.more-options-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #e4e6eb;
+    cursor: pointer;
+}
 
+.more-options-icon {
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: -2px;
+    margin-top: -10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+/* ===================================== */
 
 
 /* Tabs container */
