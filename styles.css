@@ -1,219 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', 'Noto Sans Bengali', sans-serif;
+    font-family: 'Roboto';
 }
 
 body {
     background-color: black;
 }
 
-
-
-
-.rootBody {
+.screenshot-content {
     width: 400px;
-    max-height: 800px;
+    max-height: 820px;
     margin: 0;
     background-color: white;
     position: relative;
     overflow: hidden;
 }
 
-
-.friendsListGrid {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 10px;
-    width: 100%;
-    max-width: 100%;
-}
-
-
-.friendsListGrid>div {
-    overflow: hidden;
+/* MOBILE TOP STATUS BAR */
+.top-status {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    margin: 0;
-    padding: 0;
-
-}
-
-.friendsListGrid>div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 7px;
-}
-
-
-
-.seeAllFriendsText {
-    color: #65676B;
-    margin: 3px 0px 6px 0px;
-}
-
-
-
-
-.friendsListGrid a {
-    text-decoration: none !important;
-    color: black;
-    font-weight: 450;
-    /* max-width: 20px !important; */
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-
-
-
-
-
-
-
-.mobileFooter {
-    background-color: black;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    margin-top: -25px;
-    z-index: 1000;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-
-
-
-    /* CHANGE HERE TO DISPLAY BLOCK */
-    /* display: none; */
-}
-
-
-
-
-
-.otherStatus {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    gap: 30px;
-    font-size: 14px;
-}
-
-.otherStatus img {
-    width: 15px;
-    height: 15px;
-}
-
-.photo {
-    display: flex;
+    height: 28px;
     justify-content: space-between;
     align-items: center;
-    gap: 5px;
+    padding: 0px 16px;
+    font-size: 12px;
 }
 
-.checkIn {
+.top-status .time {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.top-status>.right-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    gap: 5px;
-    position: relative;
+    gap: 0px;
 }
 
-.lifeEvent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
+.top-status>.right-icons>img {
+    height: 18px;
+    width: 18px;
 }
 
-
-.checkIn::after {
-    content: '';
-    /* Necessary for ::after to display */
-    position: absolute;
-    /* Absolute position relative to the parent (.checkIn) */
-    top: 0;
-    right: -20px;
-    /* Align the vertical line on the right */
-    width: 1px;
-    /* Set the thickness of the line */
-    height: 115%;
-    /* Full height of the parent */
-    background-color: #ddd;
-    /* Line color */
-}
+/* ============================== */
 
 
-.checkIn::before {
-    content: '';
-    /* Necessary for ::after to display */
-    position: absolute;
-    /* Absolute position relative to the parent (.checkIn) */
-    top: 0;
-    left: -20px;
-    /* Align the vertical line on the right */
-    width: 1px;
-    /* Set the thickness of the line */
-    height: 115%;
-    /* Full height of the parent */
-    background-color: #ddd;
-    /* Line color */
-}
-
-
-
-
-
-
-.mobileFooter img {
-    width: 15px;
-    height: 15px;
-}
-
-#homeNav {
-    width: 13px;
-    height: 13px;
-}
-
-#menuNav {
-    width: 15.5px;
-    height: 15.5px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.top {
+/* PROFILE NAVIGATION BAR  */
+.profile-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -223,7 +62,7 @@ body {
 
 }
 
-.nameAndArrow {
+.name-arrow {
     display: flex;
     gap: 14px;
     font-weight: bold;
@@ -231,32 +70,31 @@ body {
     align-items: center;
 }
 
-
-
-.nameTop {
-    /* font-size: 14px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: red; */
-    /* gap: 4px; */
-    font-size: 15px;
-}
-
-.arrow img {
+.arrow>img {
     margin-top: 3px;
     width: 20px;
     align-self: center;
-    /* background-color: red; */
 }
 
-.profileAndSearch {
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.profile-search {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
 }
 
+.profile-list {
+    font-weight: normal;
+    font-size: 15px;
+    color: #1877f2;
+}
 
 .search img {
     margin-top: 3px;
@@ -264,59 +102,40 @@ body {
     align-self: center;
 }
 
-.profile {
-    font-weight: normal;
-    font-size: 15px;
-    color: #1877f2;
-}
+/* ===================================== */
 
 
+/* PROFILE AND COVER SECTION  */
 
-
-
-.profileAndCoverSection {}
-
-.coverPhotoAndCameraIcon {
+.cover-camera {
     position: relative;
-
 }
 
-/* .coverPhoto{
-    height: 400px;
-} */
-
-.coverPhotoImage {
+.cover-camera>.cover>img {
     width: 100%;
     object-fit: cover;
     height: 160px;
 
 }
 
-.cameraIcon {
-
+.cover-camera>.camera {
     border-radius: 100%;
     position: absolute;
     bottom: 10px;
     right: 10px;
-    /* background-color: white; */
-    /* padding: 10px; */
 }
 
-
-.cameraIconImage {
+.cover-camera>.camera>img {
     width: 100%;
     width: 37px;
     height: 37px;
 }
 
-
-.profilePhotoAndCameraIcon {
+.dp-camera {
     position: relative;
 }
 
-.profilePhoto {}
-
-.profilePhotoImage {
+.dp {
     width: 145px;
     height: 145px;
     object-fit: cover;
@@ -326,44 +145,37 @@ body {
     margin-left: 17px;
 }
 
-.hasStory {
+.story-ring {
     border: 10px solid white;
-    /* Inner white border (2px) */
     outline: 3px solid #0866ff;
-    /* Middle green border (2px) */
     outline-offset: -7px;
-    /* Adjust offset to align with the border */
 }
 
-.cameraIconForProfile {
+.dp-camera>.camera {
 
     border-radius: 100%;
     position: absolute;
     top: -2px;
     left: 115px;
-    /* background: white; */
-
-
 }
 
-
-.cameraIconImageForProfile {
+.dp-camera>.camera>img {
     width: 100%;
     width: 37px;
     height: 37px;
     border: 2px solid white;
     border-radius: 100%;
     box-shadow: inset 0 0 0 4px rgb(255, 255, 255);
-    /* Creates a 4px white inner border */
 }
 
-#mainName {
-    font-size: 22px;
-    font-weight: 700;
-    /* background-color: red; */
-}
+/* ======================================= */
 
-.bioSection {
+
+
+
+/* PROFILE INFORMATION */
+
+.profile-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -372,54 +184,53 @@ body {
     margin-top: 3px;
     font-weight: bolder;
     margin-left: 17px;
-    /* background-color: red; */
     margin-right: 17px;
 }
 
-#friendsText {
+.profile-info .name {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.profile-info .connection {
+    display: flex;
+    gap: 10px;
+}
+
+
+.connection .count {
+    text-transform: capitalize;
+
+}
+
+.connection .type {
     color: #65676B;
     font-weight: normal;
 }
 
-#friendsNumber {
-    text-transform: capitalize;
-}
-
-
-
-.followerCount {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.folpic {
+.followers-pic {
     display: flex;
     gap: 3px;
 }
 
-
-
-.folpic div {
-
+.followers-pic>img {
     width: 28px;
     height: 28px;
     border-radius: 100%;
-    background-color: red;
 }
-
-
 
 .bio {
     font-weight: normal;
 }
 
+/* ====================================== */
 
 
-/* ================================== */
+
+
+/* NORMAL AND PROFESSIONAL PROFILE BUTTONS SECTION */
+
+
 .normal-profile {
     display: flex;
     flex-direction: row;
@@ -588,7 +399,39 @@ body {
 /* ===================================== */
 
 
-/* Tabs container */
+
+
+
+/* IS PROFILE LOCKED OR NOT SECTION  */
+
+.locked {
+    display: flex;
+    margin: 19px;
+    gap: 15px;
+}
+
+.locked .bold {
+    font-weight: bold;
+}
+
+.locked .link {
+    color: #1763cf;
+}
+
+/* =================================== */
+
+
+.after-locked-line {
+    border: 0;
+    height: 4px;
+    background-color: rgba(226, 229, 233, 1.0);
+    width: 100%;
+}
+
+
+/* TAB CONTAINER SECTION  */
+
+
 .tabs-container {
     display: flex;
     justify-content: space-around;
@@ -596,7 +439,6 @@ body {
     background-color: white;
 }
 
-/* Each tab */
 .tab {
     padding: 15px;
     cursor: pointer;
@@ -606,132 +448,172 @@ body {
     font-weight: bold;
     border-bottom: 3px solid transparent;
     font-weight: normal;
-
 }
 
-/* Active tab styles */
 .tab.active {
     color: #1763cf;
-    /* Facebook blue */
     border-bottom: 1.5px solid rgba(27, 116, 228, 1.0);
     font-weight: normal;
-
 }
 
-/* Tab content */
 .tab-content {
     display: none;
     padding: 15px;
     background-color: white;
 }
 
-/* Show active tab content */
 .tab-content.active {
     display: block;
 }
 
-
-
-.styled-line {
-    border: 0;
-    /* Remove the default border */
-    height: 4px;
-    /* Set the thickness of the line */
-    background-color: rgba(226, 229, 233, 1.0);
-    /* Set the line color */
-    /* Add some space above and below the line */
-    width: 100%;
-    /* Set the width of the line */
-}
+/* ========================== */
 
 
 
-.lockedAccount {
-    display: flex;
-    margin: 19px;
-    gap: 15px;
-}
 
-#lockBolderText {
-    font-weight: bold;
-}
-
-#lockLinkText {
-    color: #1763cf;
-}
-
-
-.hidden {
-    display: none;
-}
-
-
-.workList {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 10px;
-}
-
-
-.workList img {
-    width: 20px;
-    align-self: baseline;
-}
-
-
+/* ABOUT SECTION AND WORKLIST  */
 .intro {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-#afterIntro {
-    margin-top: 16px;
-    background-color: #ddd;
-    /* Change the color */
-    height: 1px;
-    /* Adjust the height */
-    border: none;
-    /* Remove default border */
+.intro>div {
+    display: flex;
+    gap: 12px;
 }
 
-.friends {
+.intro>div img {
+    filter: invert(33%) sepia(11%) saturate(350%) hue-rotate(180deg);
+}
+
+.intro a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.work-list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.work-list img {
+    width: 20px;
+    align-self: baseline;
+}
+
+/* ============================ */
+
+
+.after-intro-line,
+.after-friends-line {
+    margin-top: 16px;
+    background-color: #ddd;
+    height: 1px;
+    border: none;
+}
+
+
+/* FRIEND SECTION  */
+.friends-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
 }
 
-.friendsText {
+.friends-section>.friends-text {
     font-size: 18px;
     font-weight: bold;
 }
 
-.seeAllText {
+.friends-section>.see-all {
     color: #1763cf;
 }
 
+.actual-friend {
+    color: #65676B;
+    margin: 3px 0px 3px 0px;
+}
 
-.posts {
+.friends-grid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    /* FOR NOW MAKE IT DISPLAY NONE */
+    display: none;
+}
+
+.friends-grid>div {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+
+}
+
+.friends-grid>div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.friends-grid a {
+    text-decoration: none !important;
+    color: black;
+    font-weight: 450;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* ====================================== */
+
+
+/* POSTS TAB  */
+.posts-tab {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
 
 }
 
-.statusUpdateSection {
+.posts-tab>.post-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.status-update {
     display: flex;
     justify-content: space-between;
     margin: 15px 0;
     gap: 8px;
-    /* background-color: red; */
     align-items: center;
 }
 
+.status-update img {
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    object-fit: cover;
+}
 
-
-.statusUpdate {
+.status-update .status-update-text {
     width: 100%;
     background-color: rgba(240, 242, 245, 1.0);
     border-radius: 20px;
@@ -742,96 +624,120 @@ body {
     align-self: center;
 }
 
-.statusUpdateSection img {
-    width: 33px;
-    height: 33px;
-    border-radius: 100%;
-    object-fit: cover;
-}
-
-.imgIcon img {
-    object-fit: contain;
-    border-radius: 0px;
-    width: 100%;
-    /* background-color: red; */
-}
-
-.imgIcon {
-    display: flex;
-    justify-content: end;
-    width: 30px;
-    height: 30px;
-    /* background-color: red; */
-}
-
-
-
-
-.postText {
-    font-weight: bold;
-    font-size: 17px;
-}
-
-
-
-.statusUpdate span {
+.status-update .status-update-text span {
     padding-left: 10px;
     color: #3e4042;
 }
 
-/* 
-#backNav{
-    width: 15.5px;
-    height: 15.5px;
-} */
-
-
-.mobileTop {
-    /* background-color: rgb(150, 69, 69); */
-    display: flex;
-    height: 28px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 16px;
-    font-size: 12px;
+.status-update .img-icon img {
+    object-fit: contain;
+    border-radius: 0px;
+    width: 100%;
 }
 
-.right {
+.status-update .img-icon {
     display: flex;
     justify-content: end;
-    align-items: center;
-    /* background-color: red; */
-    gap: 0px;
+    width: 30px;
+    height: 30px;
 }
 
-.right img {
-    height: 18px;
-    width: 18px;
-    /* background-color: red; */
-
-}
-
-
-#timeDisplay {
-    font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 12px;
-}
-
-
-
-.intro>div {
+.other-status {
+    width: 90%;
     display: flex;
-    gap: 12px;
+    justify-content: space-between;
+    align-self: center;
+    gap: 30px;
+    font-size: 14px;
+    /* z-index: -1; */
 }
 
-
-.intro>div img {
-    filter: invert(33%) sepia(11%) saturate(350%) hue-rotate(180deg);
+.other-status img {
+    width: 15px;
+    height: 15px;
 }
 
-.intro a {
-    text-decoration: none;
-    font-weight: bolder;
-    color: black;
+.other-status .photo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.other-status .check-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.other-status .life-event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.check-in::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 1px;
+    height: 115%;
+    background-color: #ddd;
+}
+
+.check-in::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 1px;
+    height: 115%;
+    background-color: #ddd;
+}
+
+/* ======================== */
+
+
+
+/* BOTTOM NAVIGATION  */
+.bottom-navigation {
+    background-color: black;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: -25px;
+    z-index: 1000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.bottom-navigation img {
+    width: 15px;
+    height: 15px;
+}
+
+.bottom-navigation .home {
+    width: 13px;
+    height: 13px;
+}
+
+.bottom-navigation .menu {
+    width: 15.5px;
+    height: 15.5px;
+}
+
+/* ============================= */
+
+
+/* THIS IS FOR LOCKED  */
+.hidden {
+    display: none;
 }
